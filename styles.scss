@@ -1,0 +1,180 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow Semi Condensed Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/font/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow Semi Condensed SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/font/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.woff2')
+    format('woff2');
+}
+
+$white: #ffffff;
+$dark-blue: #19202d;
+$black: #121212;
+$purple-500: #733fc8;
+$purple-300: #a775f1;
+$purple-50: #ede4ff;
+$grey-500: #48556a;
+$grey-400: #676d7e;
+$grey-200: #cfcfcf;
+$grey-100: #e7eaee;
+
+%text-preset-1 {
+  font-family: 'Barlow Semi Condensed SemiBold';
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+%text-preset-2 {
+  font-family: 'Barlow Semi Condensed Medium';
+  font-size: 0.8125rem;
+  line-height: 1.1;
+}
+
+%text-preset-3 {
+  font-family: 'Barlow Semi Condensed Medium';
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+%text-preset-4 {
+  font-family: 'Barlow Semi Condensed Medium';
+  font-size: 0.6875rem;
+  line-height: 1.1;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+p,
+h2 {
+  margin: 0;
+}
+
+.border-purple-300 {
+  border: 2px solid $purple-300;
+}
+
+.bg-purple-500 {
+  background-color: $purple-500;
+}
+
+.bg-grey-500 {
+  background-color: $grey-500;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-dark-blue {
+  background-color: $dark-blue;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-purple-50 {
+  color: $purple-50;
+}
+
+.text-grey-300 {
+  color: #a3aab4;
+}
+
+.text-grey-100 {
+  color: $grey-100;
+}
+
+.text-grey-500 {
+  color: $grey-500;
+}
+
+.text-grey-400 {
+  color: $grey-400;
+}
+
+.text-grey-200 {
+  color: $grey-200;
+}
+
+.drop-shadow {
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.2474);
+}
+
+body {
+  background-color: #f6f5f6;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  width: 19.0625rem;
+  margin: clamp(4.5625rem, 1.1294rem + 14.6479vw, 14.3125rem) auto
+    clamp(4.5625rem, 1.3715rem + 13.615vw, 13.625rem);
+}
+
+.article {
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.profile {
+  display: flex;
+  gap: 17px;
+}
+
+.profile__image {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.author {
+  display: grid;
+  gap: 4px;
+}
+
+.author__name {
+  @extend %text-preset-2;
+}
+
+.author__status {
+  @extend %text-preset-4;
+}
+
+.article__title {
+  @extend %text-preset-1;
+}
+
+.article__text {
+  @extend %text-preset-3;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
