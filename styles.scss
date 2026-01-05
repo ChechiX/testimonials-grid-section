@@ -126,16 +126,21 @@ body {
 .container {
   display: grid;
   gap: 2rem;
-  width: 19.0625rem;
+  width: clamp(19.0625rem, -1.3335rem + 87.0229vw, 40.4375rem);
   margin: clamp(4.5625rem, 1.1294rem + 14.6479vw, 14.3125rem) auto
     clamp(4.5625rem, 1.3715rem + 13.615vw, 13.625rem);
+
+  @media (min-width: 48rem) {
+    width: clamp(40.4375rem, 7.0804rem + 69.494vw, 69.625rem);
+  }
 }
 
-.article {
+.section {
   border-radius: 0.5rem;
   display: grid;
   gap: 1rem;
   padding: 2rem;
+  position: relative;
 }
 
 .profile {
@@ -162,12 +167,30 @@ body {
   @extend %text-preset-4;
 }
 
-.article__title {
+.quote__icon {
+  position: absolute;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  width: 104px;
+  height: 102px;
+  right: 168px;
+  opacity: 50%;
+}
+
+.section__title {
   @extend %text-preset-1;
 }
 
-.article__text {
+.section__text {
   @extend %text-preset-3;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+
+  @media (min-width: 48rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .attribution {
